@@ -1,26 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 /* ==============================
-   DESIGN TOKENS — matching theabscompany.com
+   DESIGN TOKENS — Planet Fitness / TAC lander palette
    ============================== */
 :root {
-  --black:        #151515;
-  --black-soft:   #1E1E1E;
+  --purple:       #5C35A0;
+  --purple-dark:  #4A2882;
+  --purple-light: #EDE8F7;
   --gold:         #FCBD00;
   --gold-dark:    #E0A800;
+  --black:        #1A1A1A;
   --white:        #FFFFFF;
   --off-white:    #F7F7F7;
-  --light:        #F0F0F0;
+  --light:        #F0EEF8;
   --gray:         #DDDDDD;
-  --text:         #151515;
-  --text-mid:     rgba(21, 21, 21, 0.65);
-  --text-on-dark: rgba(255, 255, 255, 0.88);
-  --text-muted:   rgba(255, 255, 255, 0.55);
-  --border-dark:  rgba(255, 255, 255, 0.12);
-  --border-light: rgba(21, 21, 21, 0.12);
-  --shadow:       0 4px 24px rgba(0, 0, 0, 0.08);
-  --shadow-lg:    0 8px 48px rgba(0, 0, 0, 0.14);
-  --radius:       0px;  /* TAC uses square corners */
+  --text:         #1A1A1A;
+  --text-mid:     rgba(26, 26, 26, 0.60);
+  --text-on-dark: rgba(255, 255, 255, 0.92);
+  --text-muted:   rgba(255, 255, 255, 0.60);
+  --border-dark:  rgba(255, 255, 255, 0.15);
+  --border-light: rgba(26, 26, 26, 0.10);
+  --shadow:       0 4px 24px rgba(92, 53, 160, 0.10);
+  --shadow-lg:    0 8px 48px rgba(92, 53, 160, 0.16);
+  --radius:       0px;
 }
 
 /* ==============================
@@ -59,11 +61,11 @@ a { color: inherit; }
    HEADER & NAV
    ============================== */
 .site-header {
-  background: var(--black);
+  background: var(--purple);
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid var(--border-dark);
+  border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 
 .header-inner {
@@ -81,7 +83,7 @@ a { color: inherit; }
 }
 
 .logo img {
-  height: 34px;
+  height: 48px;
   width: auto;
 }
 
@@ -124,10 +126,12 @@ a { color: inherit; }
 
 .site-nav a:hover {
   color: var(--gold);
+  background: rgba(255,255,255,0.10);
 }
 
 .site-nav a.active {
   color: var(--gold);
+  background: rgba(255,255,255,0.12);
   border-bottom-color: var(--gold);
 }
 
@@ -135,7 +139,7 @@ a { color: inherit; }
    PAGE HERO
    ============================== */
 .page-hero {
-  background: var(--black);
+  background: var(--purple);
   padding: 64px 40px 60px;
   text-align: center;
   position: relative;
@@ -181,51 +185,63 @@ a { color: inherit; }
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 32px;
+  padding: 12px 28px;
   border-radius: 0;
   font-family: 'Outfit', sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
   cursor: pointer;
-  border: 2px solid var(--gold);
-  background: transparent;
-  color: var(--gold);
+  border: 2px solid transparent;
   line-height: 1;
   white-space: nowrap;
 }
 
-.btn:hover {
-  background: var(--gold);
-  color: var(--black);
+/* Primary: purple fill */
+.btn-primary {
+  background: var(--purple);
+  color: var(--white);
+  border-color: var(--purple);
+}
+.btn-primary:hover {
+  background: var(--purple-dark);
+  border-color: var(--purple-dark);
 }
 
-/* Filled variant for CTAs on dark sections */
+/* Yellow/gold CTA */
+.btn-yellow {
+  background: var(--gold);
+  color: var(--black);
+  border-color: var(--gold);
+}
+.btn-yellow:hover {
+  background: var(--gold-dark);
+  border-color: var(--gold-dark);
+}
+
+/* Outlined purple */
+.btn-outline {
+  background: transparent;
+  color: var(--purple);
+  border-color: var(--purple);
+}
+.btn-outline:hover {
+  background: var(--purple);
+  color: var(--white);
+}
+
+/* Filled gold (for dark bg sections) */
 .btn-filled {
   background: var(--gold);
   color: var(--black);
   border-color: var(--gold);
 }
-
 .btn-filled:hover {
   background: var(--gold-dark);
   border-color: var(--gold-dark);
-  color: var(--black);
-}
-
-/* Dark outlined (for light bg sections) */
-.btn-dark {
-  border-color: var(--black);
-  color: var(--black);
-  background: transparent;
-}
-
-.btn-dark:hover {
-  background: var(--black);
-  color: var(--white);
 }
 
 .btn-lg {
@@ -292,7 +308,7 @@ a { color: inherit; }
   font-family: 'Outfit', sans-serif;
   font-size: 11px;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--purple);
   text-transform: uppercase;
   letter-spacing: 0.14em;
   margin-bottom: 10px;
@@ -302,7 +318,7 @@ a { color: inherit; }
   font-family: 'Outfit', sans-serif;
   font-size: 32px;
   font-weight: 800;
-  color: var(--black);
+  color: var(--purple);
   text-transform: uppercase;
   letter-spacing: 0.02em;
   line-height: 1.1;
@@ -344,7 +360,7 @@ a { color: inherit; }
   font-family: 'Outfit', sans-serif;
   font-size: 12px;
   font-weight: 600;
-  color: var(--black);
+  color: var(--purple);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -656,7 +672,7 @@ a { color: inherit; }
    FOOTER
    ============================== */
 .site-footer {
-  background: var(--black);
+  background: var(--purple-dark);
   padding: 48px 40px;
   margin-top: 2px;
 }
@@ -671,9 +687,8 @@ a { color: inherit; }
 }
 
 .footer-logo img {
-  height: 28px;
-  filter: brightness(0) invert(1);
-  opacity: 0.6;
+  height: 40px;
+  opacity: 0.85;
 }
 
 .footer-copy {
