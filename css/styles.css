@@ -791,25 +791,25 @@ a { color: inherit; }
 /* ==============================
    HUBSPOT FORM OVERRIDES
    ============================== */
-.hs-form-frame form,
+.hs-form-html form,
 .hbspt-form form {
   font-family: 'Outfit', sans-serif !important;
 }
 
 /* Hide HubSpot's injected heading */
-.hs-form-frame h3,
+.hs-form-html h3,
 .hbspt-form h3 {
   display: none !important;
 }
 
 /* Field wrapper */
-.hs-form-frame .hs-form-field,
+.hs-form-html .hs-form-field,
 .hbspt-form .hs-form-field {
   margin-bottom: 16px !important;
 }
 
 /* Labels */
-.hs-form-frame .hs-form-field > label,
+.hs-form-html .hs-form-field > label,
 .hbspt-form .hs-form-field > label {
   font-family: 'Outfit', sans-serif !important;
   font-size: 11px !important;
@@ -822,7 +822,7 @@ a { color: inherit; }
 }
 
 /* Inputs & textareas */
-.hs-form-frame .hs-input,
+.hs-form-html .hs-input,
 .hbspt-form .hs-input {
   width: 100% !important;
   border: 2px solid var(--gray) !important;
@@ -838,25 +838,25 @@ a { color: inherit; }
   outline: none !important;
 }
 
-.hs-form-frame .hs-input:focus,
+.hs-form-html .hs-input:focus,
 .hbspt-form .hs-input:focus {
   border-color: var(--purple) !important;
 }
 
 /* Checkboxes — let them stay native, just tighten spacing */
-.hs-form-frame .inputs-list,
+.hs-form-html .inputs-list,
 .hbspt-form .inputs-list {
   list-style: none !important;
   padding: 0 !important;
   margin: 0 !important;
 }
 
-.hs-form-frame .inputs-list li,
+.hs-form-html .inputs-list li,
 .hbspt-form .inputs-list li {
   margin-bottom: 6px !important;
 }
 
-.hs-form-frame .inputs-list label,
+.hs-form-html .inputs-list label,
 .hbspt-form .inputs-list label {
   font-size: 13px !important;
   text-transform: none !important;
@@ -870,7 +870,7 @@ a { color: inherit; }
 }
 
 /* Submit button */
-.hs-form-frame .hs-button,
+.hs-form-html .hs-button,
 .hbspt-form .hs-button {
   background: var(--gold) !important;
   color: var(--black) !important;
@@ -888,21 +888,21 @@ a { color: inherit; }
   transition: background 0.2s, border-color 0.2s !important;
 }
 
-.hs-form-frame .hs-button:hover,
+.hs-form-html .hs-button:hover,
 .hbspt-form .hs-button:hover {
   background: var(--gold-dark) !important;
   border-color: var(--gold-dark) !important;
 }
 
 /* Error messages */
-.hs-form-frame .hs-error-msgs,
+.hs-form-html .hs-error-msgs,
 .hbspt-form .hs-error-msgs {
   list-style: none !important;
   padding: 0 !important;
   margin: 4px 0 0 !important;
 }
 
-.hs-form-frame .hs-error-msgs label,
+.hs-form-html .hs-error-msgs label,
 .hbspt-form .hs-error-msgs label {
   font-size: 11px !important;
   color: #c0392b !important;
@@ -912,7 +912,7 @@ a { color: inherit; }
 }
 
 /* Success message */
-.hs-form-frame .submitted-message,
+.hs-form-html .submitted-message,
 .hbspt-form .submitted-message {
   font-family: 'Outfit', sans-serif !important;
   font-size: 15px !important;
