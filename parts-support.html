@@ -69,26 +69,11 @@
             </svg>
           </div>
           <h2>Submit a Support Request</h2>
-          <p>Having an issue with your equipment? Fill out the form below and our support team will follow up within one business day.</p>
-
-          <!-- ============================================================
-               HUBSPOT FORM EMBED
-               Replace the div below with your HubSpot form embed code.
-
-               Steps:
-               1. Go to HubSpot → Marketing → Forms
-               2. Create or select your support ticket form
-               3. Click "Embed" → copy the embed code
-               4. Paste it here, replacing this placeholder div
-
-               Example embed code looks like:
-               <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-               <script>
-                 hbspt.forms.create({ region: "na1", portalId: "XXXXXXX", formId: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" });
-               </script>
-               ============================================================ -->
-          <div class="hs-form-frame" data-region="na1" data-form-id="1620f344-3d4d-4426-95a1-a8fa58f0e66b" data-portal-id="23319335"></div>
-
+          <p>Having an issue with your equipment? Our support team will follow up within one business day.</p>
+          <button class="btn btn-primary btn-lg" id="open-support-modal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Submit a Request
+          </button>
         </div>
 
       </div>
@@ -107,6 +92,23 @@
       </p>
     </div>
   </footer>
+
+  <!-- SUPPORT REQUEST MODAL -->
+  <div class="modal-overlay" id="support-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Submit a Support Request">
+    <div class="modal-box">
+      <button class="modal-close" id="close-support-modal" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-header">
+        <p class="card-label">The Abs Company</p>
+        <h2>Submit a Support Request</h2>
+        <p class="modal-subtext">Fill out the form below and our team will follow up within one business day.</p>
+      </div>
+      <div class="hs-form-frame" data-region="na1" data-form-id="1620f344-3d4d-4426-95a1-a8fa58f0e66b" data-portal-id="23319335"></div>
+    </div>
+  </div>
+
+  <script src="js/modal.js"></script>
 
 </body>
 </html>
