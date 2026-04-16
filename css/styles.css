@@ -337,9 +337,32 @@ a { color: inherit; }
   font-weight: 300;
   color: var(--text-mid);
   line-height: 1.75;
-  margin-bottom: 32px;
-  flex-grow: 1;
+  margin-bottom: 0;
+  flex-grow: 0;
   max-width: 440px;
+}
+
+.product-how-to {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin-bottom: 32px;
+  max-width: 440px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-light);
+  margin-top: 14px;
+}
+
+.how-to-label {
+  display: block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--purple);
+  margin-bottom: 6px;
 }
 
 .product-actions {
