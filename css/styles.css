@@ -429,6 +429,16 @@ a { color: inherit; }
   padding: 64px 0 80px;
 }
 
+.filecamp-embed {
+  background: var(--white);
+  padding: 4px;
+}
+
+.filecamp-embed iframe {
+  display: block;
+  min-height: 700px;
+}
+
 .embed-placeholder {
   background: var(--white);
   padding: 80px 40px;
