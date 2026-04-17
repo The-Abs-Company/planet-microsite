@@ -693,7 +693,7 @@ a { color: inherit; }
   background: var(--white);
   padding: 48px;
   margin-top: 2px;
-  margin-bottom: 0;
+  margin-bottom: 80px;
 }
 
 .team-section > h2 {
@@ -748,13 +748,13 @@ a { color: inherit; }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--gray);
+  color: var(--black);
   margin-bottom: 4px;
 }
 
 .team-card .team-title {
   font-size: 12px;
-  color: var(--gray);
+  color: var(--text-mid);
   font-weight: 300;
 }
 
