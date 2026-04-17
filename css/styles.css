@@ -595,7 +595,7 @@ a { color: inherit; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2px;
-  padding: 64px 0 2px;
+  padding: 64px 0 80px;
 }
 
 .contact-card {
