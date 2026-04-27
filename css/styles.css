@@ -87,6 +87,11 @@ a { color: inherit; }
   width: auto;
 }
 
+.logo-wordmark {
+  height: 36px;
+  width: auto;
+}
+
 .logo-divider {
   width: 1px;
   height: 28px;
