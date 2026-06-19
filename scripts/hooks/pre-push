@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#
+# pre-push hook — blocks direct pushes to `main`.
+#
+# Enforcement of the "no direct push to main" convention. GitHub Free cannot
+# hard-block pushes to a protected branch on a private repo, so this local hook
+# is the first line of defense. Push a feature branch and open a PR instead.
+#
+# INSTALL (once per clone):
+#   git config core.hooksPath scripts/hooks
+
+protected_branch="main"
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+  if [ "$remote_ref" = "refs/heads/$protected_branch" ]; then
+    echo ""
+    echo "  Direct push to '$protected_branch' is blocked by convention."
+    echo "  Land changes through a feature branch + pull request:"
+    echo "    git switch -c feature/your-change"
+    echo "    git push -u origin feature/your-change"
+    echo "  (Genuine emergency override: git push --no-verify)"
+    echo ""
+    exit 1
+  fi
+done
+
+exit 0
